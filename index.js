@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
 
-app.get('/', (req, res) => {
+app.get('/api/jokes/random', (req, res) => {
     try {
         const randomIndex = Math.floor(Math.random() * jokes.length);
         res.status(200).json(
